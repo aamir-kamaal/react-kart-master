@@ -1,14 +1,15 @@
 import React from 'react'
-import Appbar from './pages/HomePage/Appbar'
-import Navbar from './pages/HomePage/Navbar'
-import Item from './pages/HomePage/Item'
+
+import HomePage from './pages/HomePage/index'
+
+
+
+
 
 const ReactkartApp = () => {
     return (
         <div>
-            <Appbar />
-            <Item />
-
+            <HomePage />
         </div>
     )
 }

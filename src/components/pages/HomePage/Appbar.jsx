@@ -18,6 +18,7 @@ import MoreIcon from '@material-ui/icons/MoreVert';
 const useStyles = makeStyles((theme) => ({
     grow: {
         flexGrow: 1,
+
     },
     menuButton: {
         marginRight: theme.spacing(2),
@@ -174,7 +175,7 @@ export default function Appbar() {
                         <MenuIcon />
                     </IconButton>
                     <Typography className={classes.title} variant="h6" noWrap>
-                        REACTKART
+                        shopping FUN
           </Typography>
                     <div className={classes.search}>
                         <div className={classes.searchIcon}>
