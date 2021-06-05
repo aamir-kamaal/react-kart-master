@@ -1,18 +1,21 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Categories from './Categories'
-import Appbar from './Appbar'
-import Footer from './Footer'
-import Item from './Product'
+import Navbar from './Navbar'
 import ProductList from './ProductList'
+import Footer from './Footer'
+import LoginPrompt from '../../common/LoginPrompt'
 
 const HomePage = () => {
+    const [filteredProducts, setFilteredProducts] = useState([])
+    const [isModalOpen, setIsModalOpen] = useState(false);
 
     return (
         <div>
-            <Appbar />
-            <Categories />
-            <ProductList />
-            <Footer />
+            <Navbar setIsModalOpen={setIsModalOpen} setFilteredProducts={setFilteredProducts}/>
+            <Categories/>
+            <ProductList setIsModalOpen={setIsModalOpen} filteredProducts={filteredProducts}/>
+            <LoginPrompt isOpen={isModalOpen} setIsOpen={setIsModalOpen}/>
+            <Footer/>
         </div>
     )
 }
